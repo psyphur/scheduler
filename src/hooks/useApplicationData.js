@@ -75,6 +75,5 @@ export default function useApplicationData(props) {
     selectedDay.spots += i;
   }
 
-
   return { bookInterview, cancelInterview, state, setDay, spotsRemaining };
 }
