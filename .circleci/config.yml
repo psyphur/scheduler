@@ -6,34 +6,34 @@ jobs:
 
     working_directory: ~/client
 
-  steps:
-    - checkout
-    - restore_cache:
-        keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          - v1-dependencies-
-    - run: npm install
-    - save_cache:
-        paths:
-          - node_modules
-        key: v1-dependencies-{{ checksum "package.json" }}
-    - run: npm test
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+      - run: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run: npm test
 
   deploy:
-      machine:
-        enabled: true
+    machine:
+      enabled: true
 
-      working_directory: ~/client
+    working_directory: ~/client
 
-      steps:
-        - add_ssh_keys:
-            fingerprints:
-              - "a8:5d:b6:76:29:d7:4c:fa:18:66:9b:a7:7f:38:80:6e"
-        - checkout
-        - run:
-            name: Push Master to Production
-            command: |
-              git push https://github.com/psyphur/scheduler.git master:production
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "a8:5d:b6:76:29:d7:4c:fa:18:66:9b:a7:7f:38:80:6e"
+      - checkout
+      - run:
+          name: Push Master to Production
+          command: |
+            git push https://github.com/psyphur/scheduler.git master:production
 
 workflows:
   version: 2
