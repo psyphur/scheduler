@@ -1,5 +1,6 @@
 # Interview Scheduler
 Interview Scheduler is a single-page app that allows a user to book, edit and delete student interview appointments.
+Also hosted on Netlify. Check it out [here](https://condescending-kowalevski-e8dc3d.netlify.app/)!
 
 ## Setup
 
