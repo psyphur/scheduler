@@ -33,11 +33,11 @@ npm run storybook
 
 ## Screenshots 
 
-!["Screenshot of homepage"]()
-!["Screenshot of booking an interview"]()
-!["Screenshot of editing an interview"]()
-!["Screenshot of deleting an interview"]()
-!["Screenshot of currently booked interviews"]()
+!["Screenshot of homepage"](https://github.com/psyphur/scheduler/blob/master/docs/screenshots/show-interviews.png?raw=true)
+!["Screenshot of booking an interview"](https://github.com/psyphur/scheduler/blob/master/docs/screenshots/book-interview.png?raw=true)
+!["Screenshot of editing an interview"](https://github.com/psyphur/scheduler/blob/master/docs/screenshots/edit-interview.png?raw=true)
+!["Screenshot of deleting an interview"](https://github.com/psyphur/scheduler/blob/master/docs/screenshots/delete-interview.png?raw=true)
+!["Screenshot of currently booked interviews"](https://github.com/psyphur/scheduler/blob/master/docs/screenshots/show-interviews.png?raw=true)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
