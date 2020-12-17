@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 export default function useApplicationData(props) {
-  const GET_DAYS = "http://localhost:8001/api/days";
-  const GET_APPOINTMENTS = "http://localhost:8001/api/appointments";
-  const GET_INTERVIEWERS = "http://localhost:8001/api/interviewers";
+  const GET_DAYS = "/api/days";
+  const GET_APPOINTMENTS = "/api/appointments";
+  const GET_INTERVIEWERS = "/api/interviewers";
 
   const [state, setState] = useState({
     day: "Monday",
@@ -37,7 +37,7 @@ export default function useApplicationData(props) {
     };
   
     const diff = !state.appointments[id].interview ? -1 : 0;
-    return axios.put(`http://localhost:8001/api/appointments/${id}`, appointment)
+    return axios.put(`/api/appointments/${id}`, appointment)
     .then(() => {
       spotsRemaining(diff);
       setState({
@@ -58,7 +58,7 @@ export default function useApplicationData(props) {
       [id]: appointment
     };
 
-    return axios.delete(`http://localhost:8001/api/appointments/${id}`)
+    return axios.delete(`/api/appointments/${id}`)
     .then(() => {
       spotsRemaining(1);
       setState({
