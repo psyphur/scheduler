@@ -1,5 +1,6 @@
 export function getAppointmentsForDay(state, day) {
   const appointments = [];
+  // eslint-disable-next-line
   state.days.filter(days => {
     if (days.name === day) {
       for (const appointment of days.appointments) {
@@ -19,6 +20,7 @@ export function getInterview(state, interview) {
 
 export function getInterviewersForDay(state, day) {
   const interviewers = [];
+  // eslint-disable-next-line
   state.days.filter(days => {
     if (days.name === day) {
       for (const interviewer of days.interviewers) {
