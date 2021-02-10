@@ -19,15 +19,10 @@ export default function Form(props) {
   }
 
   function validate() {
-    if (name === "") {
-      setError("Student or interviewer name cannot be blank");
+    if (name === "" || interviewer === null) {
+      setError("All fields are required");
       return;
     }
-    if (interviewer === null) {
-      setError("Interviewer cannot be blank");
-      return;
-    }
-
     props.onSave(name, interviewer);
     setError(null);
   }
